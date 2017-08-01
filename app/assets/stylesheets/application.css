@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+ background: url(/assets/background.png)
+ }
+ .main {
+ background-color: #00a5ff;
+ margin: 0 auto;
+ width: 600px;
+ height: 900px;
+ border-radius: 50px;
+ border: 10px solid black;
+ }
+ .white {
+ margin-top: 1px;
+ background-color: #FFF;
+ margin: 0 auto;
+ width: 600px;
+ height: 710px;
+ text-align: center;
+ border-radius: 50px;
+ margin-bottom: 10px;
+ }
+ .text_box {
+ margin-top: 50px;
+ background-color: #FFF;
+ margin: 0 auto;
+ width: 580px;
+ height: 45px;
+ text-align: center;
+ border-radius: 50px;
+ }
+ .header {
+  margin-left: 20px;
+ }
+ .contact {
+  height: 81px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: arial;
+  line-height: 81px;
+  margin-left: 20px;
+ }
+ img {
+  display: inline-block;
+  vertical-align: middle;
+ }
+ input {
+  outline: none;
+  border: none;
+  width: 550px;
+  height: 45px;
+  background: transparent;
+  font-size: medium;
+ }
+  /* The alert message box */
+ .alert-text {
+  margin-top: 3px;
+ }
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    height: 25px;
+    vertical-align: middle;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 3px;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
