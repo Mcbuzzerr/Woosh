@@ -30,7 +30,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: arial;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -81,12 +81,13 @@ table {
  .white {
  margin-top: 1px;
  background-color: #FFF;
+ width: 590px;
  margin: 0 auto;
- width: 600px;
  height: 638px;
- text-align: center;
+ text-align: left;
  border-radius: 50px;
  margin-bottom: 10px;
+ overflow-y: auto;
  }
  .text_box {
  margin-top: 50px;
@@ -144,6 +145,10 @@ table {
  .logo {
   height: 81px;
   width: 100px;
+ }
+ .content {
+  margin-top: 15px;
+  margin-left: 10px;
  }
 
  /* start of alert/notice bars */

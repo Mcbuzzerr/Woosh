@@ -10,11 +10,17 @@
 
 <div class="main">
     <div class="header">
-    <h1 class="contact">[your contacts name here]</h1>
+    <h1 class="contact">Woosh</h1>
     </div>
-    <div class="white">
+    <div class="white" id="messages">
+      <% @messengers.each do |message| %>
+      <p><%= message.user.name %>: <%= message.message %></p>
+      <% end %>
     </div>
     <div class="text_box">
-        <input class="text" maxlength="2048" type="text">
+      <%= form_with(model: @messenger, local: true) do |form| %>
+        <%= form.text_field :message, class: "text", id: :messenger_message, autofocus: true  %>
+      <% end %>
     </div>
 </div>
+
