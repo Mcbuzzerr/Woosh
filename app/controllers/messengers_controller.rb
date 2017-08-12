@@ -1,6 +1,6 @@
 class MessengersController < ApplicationController
   before_action :set_messenger, only: [:show, :edit, :update, :destroy]
-#  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  access user: [:create], admin: :all
 
   # GET /messengers
   def index

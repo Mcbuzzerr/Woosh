@@ -7,20 +7,26 @@
     </div>
   <% end %>
 
+<% login %>
 
 <div class="main">
     <div class="header">
     <h1 class="contact">Woosh</h1>
     </div>
     <div class="white" id="messages">
-      <% @messengers.each do |message| %>
-      <p><%= message.user.name %>: <%= message.message %></p>
-      <% end %>
+      <div class="content">
+        <% @messengers.each do |message| %>
+        <p class="<%= text_class message %>"><%= message.user.name %>: <%= message.message %></p>
+        <% end %>
+      </div>
     </div>
     <div class="text_box">
       <%= form_with(model: @messenger, local: true) do |form| %>
         <%= form.text_field :message, class: "text", id: :messenger_message, autofocus: true  %>
       <% end %>
+    </div>
+    <div class="refresh">
+      <a href="/"><i class="fa fa-refresh" style="font-size:24px"></i></a>
     </div>
 </div>
 

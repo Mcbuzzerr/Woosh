@@ -6,6 +6,7 @@
       <link href="/assets/favicon.ico" rel="shortcut icon">
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -14,17 +15,10 @@
       <%= link_to "Home", root_path %>
       <% if current_user %>  
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <a href="/edit" class="edit" style="float: right; margin: 40px 20px 0px 0px;">Edit Profile</a>
       <% else %>
-      <a href="/login">Login/Sign up</a>
-      <% end %>
-    </div>
-    <div>
-      <% if notice %>
-        <div class="notice">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <p><%= notice %></p>
-        </div>
-      <% else %>
+      <a href="/login">Login</a> <p class="or">or</p>
+      <a href="/sign_up">Sign up</a>
       <% end %>
     </div>
     <%= yield %>
