@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  access user: [:home], admin: :all
+  access all: [:home], user: [:home], admin: :all
 
   def home
     @messenger = Messenger.new
